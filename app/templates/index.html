@@ -1,5 +1,47 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %}{% include 'login_form.html' %}
 <style type="text/css">
+  body {
+    /*background-color: #8ae332; /* Set your desired background color */
+  
+    background-image: url('file:///Users/alexchilaka/Documents/GitHub/Cn_Project/Blockchain-based-File-Storage/app/static/Uploads/4.png');
+    background-size: cover; /* Adjust this as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional - makes the background fixed */
+  }
+
+  
+
+  /* Header Styling */
+  .alert-primary {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+  }
+
+  /* Button Styling */
+  .btn-primary {
+    background-color: #b9293c; /* Red background color */
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #ff5252; /* Lighter red on hover */
+  }
+
+  /* Avatar Styling */
+  .post_box-avatar {
+    /* Add background gradient */
+    background: linear-gradient(to bottom, #ff6347, #ff0000);
+    /* Adjust text color for better contrast */
+    color: #fff;
+  }
+
+  /* Post Box Styling */
+  .post_box {
+    background: #fff; /* White background */
+    border: 0.1rem solid #d3d3d3; /* Light gray border */
+    border-radius: 0.4rem;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2); /* Subtle box shadow */
+  }
   .navbar-item:hover {
     background-color: #b9293c;
   }
@@ -129,7 +171,7 @@
 </style>
 <div class="container-fluid">
   <div class="row" style="padding-top: 10px">
-    <div class="col-sm-4" style="">
+    <div class="col-6">
       <h2 class="text-center alert alert-primary">Upload a File</h2>
       <form action="/submit" method="POST" enctype="multipart/form-data">
         <div class="form-group">
@@ -155,7 +197,7 @@
       </form>
     </div>
 
-    <div class="col-sm-7">
+    <div class="col-6">
       <h2 class="text-center alert alert-primary">Uploaded Files</h2>
       {% for post in request_tx %}
       <div class="post_box">
