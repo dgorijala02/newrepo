@@ -1,19 +1,17 @@
-{% extends "base.html" %} {% block content %}{% include 'login_form.html' %}
+{% extends "base.html" %} {% block content %}
 <style type="text/css">
   body {
     /*background-color: #8ae332; /* Set your desired background color */
-  
-    background-image: url('file:///Users/alexchilaka/Documents/GitHub/Cn_Project/Blockchain-based-File-Storage/app/static/Uploads/4.png');
-    background-size: cover; /* Adjust this as needed */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional - makes the background fixed */
+    /* background-color: hsl(180, 63%, 69%); */
+    background-image: url('file:///Users/alexchilaka/Documents/GitHub/Cn_Project/Blockchain-based-File-Storage/app/static/Uploads/6.jpeg');
+    
   }
 
   
 
   /* Header Styling */
   .alert-primary {
-    background-color: #007bff; /* Blue background color */
+    background-color: #d4e14c; /* Blue background color */
     color: #fff; /* White text color */
   }
 
@@ -106,7 +104,7 @@
   
   /* Post boxes styling */
   .post_box {
-    background: rgb(131, 251, 245);
+    background: white;
     padding: 1.2rem 0 0 1.2rem;
     margin-top: 0;
     margin-bottom: 0.8rem;
@@ -195,9 +193,10 @@
         </div>
         <button type="submit" class="btn btn-primary mb-2">Upload</button>
       </form>
-    </div>
+    <!-- </div>
 
-    <div class="col-6">
+    <div class="col-6"> -->
+      <br><br>
       <h2 class="text-center alert alert-primary">Uploaded Files</h2>
       {% for post in request_tx %}
       <div class="post_box">
